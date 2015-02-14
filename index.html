@@ -32,13 +32,16 @@
         <div class="item active">
           <img src="./img/truck-focus.jpg" alt="First slide">
           <div class="container">
-            <div class="carousel-caption">
-              <h1>NRB Services</h1>
+            <div id="NRBServices" itemscope itemtype="http://schema.org/Organization" class="carousel-caption">
+              <h1><span itemprop="name">NRB Services</span></h1>
               <p>Let us take care of all your snow removal needs</p>
-			  <p>Serving Worcester County</p>
+			  <div id="worcester" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			   <p>Serving <span itemprop="addressLocality">Worcester</span> County</p>
+			   <meta itemprop="addressRegion" content="Massachusetts" />
+			  </div>
 			  <p></p>
-              <p><a class="btn btn-lg btn-primary" href="tel:774-272-5996" role="button"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 774-272-5996</a></p>
-			  <p><a class="btn btn-lg btn-primary" href="mailto:nate@nrbservices.org" role="button"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> nate@nrbservices.org</a></p>
+              <p><a class="btn btn-lg btn-primary" href="tel:774-272-5996" role="button"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <span itemprop="telephone">774-272-5996</span></a></p>
+			  <p><a class="btn btn-lg btn-primary" href="mailto:nate@nrbservices.org?subject=Snow%20Removal" role="button"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <span itemprop="email">nate@nrbservices.org</span></a></p>
             </div>
           </div>
         </div>
@@ -75,8 +78,17 @@
 
       <!-- FOOTER -->
       <footer>
-        <p>&copy; 2015 Nathan Burgess &middot; Phone: <a href="tel:774-272-5996">774-272-5996</a> &middot; Email: <a href="mailto:nate@nrbservices.org">nate@nrbservices.org</a> &middot; Facebook: <a href="https://www.facebook.com/nathan.burgess.963">Nathan Burgess</a></p>
-      </footer>
+	  <div itemscope itemtype="http://schema.org/Person">
+        <p>&copy; 2015 <span itemprop="name">Nathan Burgess</span> &middot; Phone: <a href="tel:774-272-5996"><span itemprop="telephone">774-272-5996</span></a> &middot; Email: <a href="mailto:nate@nrbservices.org"><span itemprop="email">nate@nrbservices.org</span></a> &middot; Facebook: <a href="https://www.facebook.com/nathan.burgess.963">Nathan Burgess</a></p>
+		<meta itemprop="worksFor" itemscope itemtype="http://schema.org/Organization" itemref="NRBServices">
+		<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">    
+			<meta itemprop="addressLocality" content="Paxton" />
+			<meta itemprop="addressRegion" content="MA" />
+			<meta itemprop="postalCode" content="01612" />
+		</div>
+		<meta itemprop="sameas" content="https://plus.google.com/108244445098198744952/" />
+	  </div>
+	  </footer>
 
     </div><!-- /.container -->
 
